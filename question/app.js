@@ -4,9 +4,9 @@ let greet = '私のニックネームは' + nickname + 'です。年齢は' + ag
 console.log(greet);
 
 let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
-let favoritelanguage = languages[0];
-let nextlanguage = languages[3];
-let message = `私の好きな言語は${favoritelanguage}です。次は${nextlanguage}を勉強してみたいです。`;
+let favoriteLanguage = languages[0];
+let nextLanguage = languages[3];
+let message = `私の好きな言語は${favoriteLanguage}です。次は${nextLanguage}を勉強してみたいです。`;
 console.log(message);
 
 let user = {
@@ -56,34 +56,29 @@ const sayWorld = function() {
 };
 sayWorld();
 
-user.birthday = function() {
-  console.log('2000-09-27');
+user.birthday = '2000-09-27';
+user.sayHello = function() {
+  console.log('Hello！');
 };
-const updatedUser = {
-  ...user, 
-  birthday: '2000-09-27', 
-  sayHello: function() { 
-    console.log('Hello!');
-  }
-};
-updatedUser.sayHello();
+console.log(user);
+user.sayHello();
 
 let calc = {};
 calc.add = function(x, y) {
   console.log(x + y);
 };
-calc.add(3, 4);
 calc.subtract = function(x, y) {
   console.log(x - y);
 };
-calc.subtract(15, 5);
 calc.multiply = function(x, y) {
   console.log(x * y);
 };
-calc.multiply(7, 7);
 calc.divide = function(x, y) {
   console.log(x / y);
 };
+calc.add(3, 4);
+calc.subtract(15, 5);
+calc.multiply(7, 7);
 calc.divide(5, 1);
 
 function remainder(x, y) {
@@ -94,6 +89,7 @@ console.log('5 を 3 で割った余りは ' + result + ' です。');
 
 //Q10
 // 「function foo() {let x = 1;}」でxは関数foo内で定義されており、この関数のスコープ内でのみ参照できます。「console.log(x);」はxを参照しようとしていますが、foo関数のスコープ外にあるため「x is not defined」というエラーが発生します。
+// スコープは変数（x）に対して設定されているものであり、スコープ外から参照した場合、変数xは定義されていない状態になります。
 
 console.log(Math.floor(Math.random() * 10));
 
