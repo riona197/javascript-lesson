@@ -44,14 +44,11 @@ ages.forEach(ages => {
 const average = sum /ages.length;
 console.log(average);
 
-function doFunc(callback) {
-  callback();
-}
 function sayHello() {
   console.log('Hello');
 }
-doFunc(sayHello);
-const sayWorld = function() {
+sayHello();
+let sayWorld = function() {
   console.log('World');
 };
 sayWorld();
